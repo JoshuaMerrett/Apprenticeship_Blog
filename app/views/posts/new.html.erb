@@ -1,0 +1,15 @@
+<!-- The code below will provide the web page with a page title, the page title will Display New Post. -->
+<% provide(:page_title, "New Post") %>
+<!-- The code below will place the word active wherever :blog_active is yield. This will display the page that is being viewed in bold in the navbar. -->
+<% provide(:blog_active, "active") %>
+
+<%= stylesheet_link_tag '_form', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<section class="new_post">
+    <h1>New Post</h1>
+    <div class="container">
+        <%= render 'form', post: @post %>
+
+        <%= link_to 'Back', root_path, class: "btn btn-posts_back" %>
+    </div>
+</section>

@@ -1,0 +1,68 @@
+.log_in, .sign_up, .forgot {
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-top: 5%;
+    margin-right: 30%;
+    margin-left: 25%;
+}
+
+#user_email, #user_password, #user_password_confirmation {
+    width: 80%;
+}
+
+.btn-user_log_in {
+    background-color: #789648;
+    color: #fff;
+    border: solid black 1.5px;
+    height: 33px;
+    margin-top: 4px;
+    padding-top: 3px;
+    &:hover {
+        background-color: darken($color: #789648, $amount: 10);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
+.btn-user_sign_up {
+    background-color: darken($color: #bdc3c7, $amount: 10);
+    color: #fff;
+    border: solid black 1.5px;
+    height: 33px;
+    margin-top: 4px;
+    padding-top: 3px;
+    &:hover {
+        background-color: darken($color: #bdc3c7, $amount: 20);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
+.btn-forgot {
+    background-color: #820E1C;
+    color: #fff;
+    border: solid black 1.5px;
+    height: 33px;
+    margin-top: 4px;
+    padding-top: 3px;
+    &:hover {
+        background-color: lighten($color: #820E1C, $amount: 5);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #bdc3c7, $amount: 50) 1px;
+    }
+}
+
+.btn-user_reset {
+    background-color: #820E1C;
+    color: #fff;
+    border: solid black 1.5px;
+    height: 33px;
+    padding-top: 3px;
+    &:hover {
+        background-color: lighten($color: #820E1C, $amount: 5);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #bdc3c7, $amount: 50) 1px;
+    }
+}

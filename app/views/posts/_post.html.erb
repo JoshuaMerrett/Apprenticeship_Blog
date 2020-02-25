@@ -1,0 +1,20 @@
+<!-- The code below is used to create the layout for each individual post, all posts will use this same layout and be displayed on the index page -->
+
+<!-- Col is natvie to bootstrap and tells the code to structure the content into columns with the max number of columns being 12. Col-sm is used for small and medium sized devices. The 6 relates to how many columns will be used, which will be 2 columns as 6 x 2 is 12. This also applies with 4, this will use 3 columns to display the content. -->
+
+<div class="col-sm-6  col-lg-4">
+    <div class="card">
+        <div class="card-topper">
+        <!-- The code below will check to see if the post currently has an image attached to it, if there is an image attached then the image will be displayed. If there isn't an image attached then nothing will be displayed. -->
+            <%= image_tag (post.image) if post.image.attached? %>
+        </div>
+        <!-- The code below will display the text contents relating to the specific blog post. The contents will vary depending on the post being displayed and the posts will only be displayed once. -->
+        <div class="card-block">
+            <!-- This code will display each individual post title and link to the contents of that specific blog post. -->
+            <h4 class="card-title"><%= link_to post.title, post %></h4>
+            <p class="published-date"><%= post.display_day_published %></p>
+            <p class="card-text"><%= truncate(post.description, length: 130) %></p>
+            <%= link_to 'Read', post, class: 'btn btn-read' %>
+        </div>
+    </div>
+</div>

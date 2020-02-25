@@ -1,0 +1,40 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :image %>
+    <%= form.file_field :image, class: "form-control" %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control" %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :content %>
+    <%= form.rich_text_area :body, class: "form-control" %>
+  </div>
+
+  <% if current_page? (new_post_path(@post)) %>
+    <br /><%= form.submit "Create Post", class: "btn btn-new_update" %>
+  <% else current_page? (edit_post_path(@post)) %>
+    <br /><%= form.submit "Update Post", class: "btn btn-new_update" %>
+  <% end %>
+<% end %>
+

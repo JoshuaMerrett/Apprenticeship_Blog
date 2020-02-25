@@ -1,0 +1,60 @@
+<!-- The section below creates the layout for the navigation bar on smaller devices, this functions by creating a collapse navbar. This displays a box in the navbar which can be clicked, this will then dropdown and reveal the navbar links -->
+<div class="collapse" id="exCollapsingNavbar">
+    <div class="collapse-bg p-a-1">
+        <div class="card">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                <%= link_to 'Blog', root_path, class: "nav-link" %>
+                </li>
+                <li class="list-group-item">
+                <%= link_to 'About', about_path, class: "nav-link" %>
+                </li>
+                <li class="list-group-item">
+                <%= link_to 'Contact', contact_path, class: "nav-link" %>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- The section below creates the navigation bar that will be used on all pages that renders navbar layout, this will ensure that the navigation bar contains the same content and looks the same across the application. -->
+<nav class="navbar navbar-light bg-faded">
+    <div class="container">
+    <!-- This code will display the name or logo that is labelled below. The code bellow will display Josh Blog in the navbar. -->
+        <a class='navbar-brand' href='/'>
+            Joshua Merrett<span class='light'> Blog</span>
+        </a>
+    <!-- This code is used to create the button for the collapse navbar that will be displayed on smaller screens, the code will call id of exCollapseNavbar to check what content should be displayed when the button has been pressed. -->
+        <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+        &#9776;
+        </button>
+        <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
+            <li class="nav-item">
+                <%= link_to 'Blog', root_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+                <%= link_to 'About', about_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+                <%= link_to 'Contact', contact_path, class: "nav-link" %>
+            </li>
+
+            <!-- The code below will check to see if there is a user currently signed in. -->
+            <% if current_user %>
+            <!-- If a user is currently signed in then only the sign out button will be displayed in the navbar, and the sign up and log in options will be removed. -->
+                <li class="nav-item">
+                    <!-- The link to will assign the appropriate path to the words that are placed next to link_to. In the code below, the path and actions will be assigned to the words Sign Out. The path for this link will look for destory_user_session, this will destroy the current user session and sign them out of thier account. The following code, method: :delete, is required to tell the code that the method that should be performed when the link is pressed is delete, which will delete the current session. -->
+                    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "btn btn-sign_out" %>
+                </li>
+            <% else %>
+                <!-- The following links will be displayed in the navigation bar if the current user is not true, meaning that their is no user currently signed in. -->
+                <li class="nav-item">
+                    <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-sign_up" %>
+                </li>
+
+                <li class="nav-item">
+                    <%= link_to 'Log In', new_user_session_path, class: "btn btn-log_in" %>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+</nav>

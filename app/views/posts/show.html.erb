@@ -1,0 +1,29 @@
+<!-- The code below will provide the web page withx a page title, the page title will depend to the title of the post the is on the web page. -->
+<% provide(:page_title, @post.title) %>
+<!-- The code below will place the word active wherever :blog_active is yield. This will display the page that is being viewed in bold in the navbar. -->
+<% provide(:blog_active, "active") %>
+
+  <div class="row">
+    <div class="container-post">
+      <div class="col-md-2" style="padding-top: 5px;">
+        <%= link_to root_path, class: "btn btn-secondary btn-back" do %>
+          Back to Posts
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <!-- Col is natvie to bootstrap and tells the code to structure the content into columns with the max number of columns being 12. Col-md is used for medium sized devices. The 10 relates to how many columns the content will use, the offset will use columns to center the content. Then the line at the end of the class will center all of the text. -->
+  <div class="col-md-12 col-lg-10 text-xs-center" style="margin-left: 10%;">
+
+    <h1 class="post_title"><%= @post.title %></h1>
+    <p class="date"><%= @post.display_day_published %></p>
+
+    <br>
+    <% if current_user && current_user.admin %>
+      <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure you want to delete this post?'}, class: 'btn btn-delete' %>
+      <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-edit' %><br>
+    <% end %>
+    <br>
+    <%= @post.body %>
+  </div>

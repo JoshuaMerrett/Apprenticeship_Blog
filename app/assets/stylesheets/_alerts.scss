@@ -1,0 +1,22 @@
+.alert, .notice {
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+    p:last-child {
+        margin-bottom: 0px;
+    }
+    &.alert-warning {
+      .alert-heading {
+        color: #3E3221;
+      }
+    }
+    &.borderless {
+      border: none;
+    }
+  
+    &.compact {
+        padding: 15px 20px;
+        font-size: 0.9rem * 0.8;
+    }
+  }

@@ -1,0 +1,16 @@
+<!-- The code below will provide the web page with a page title, the page title will be edit and the display the title of the post that has been selected for editing. -->
+<% provide(:page_title, "Edit #{@post.title}") %>
+<!-- The code below will place the word active wherever :blog_active is yield. This will display the page that is being viewed in bold in the navbar. -->
+<% provide(:blog_active, "active") %>
+
+<%= stylesheet_link_tag '_form', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<section class="edit_post">
+    <h1>Editing Post</h1>
+    <div class="container">
+        <%= render 'form', post: @post %>
+
+        <%= link_to :Show , @post, class: "btn btn-show" %>
+        <%= link_to 'Back', @post, class: "btn btn-edit_posts_back" %>
+    <div>
+</section>

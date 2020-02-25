@@ -1,0 +1,67 @@
+.navbar {
+    background-color: #bdc3c7;
+    margin-bottom: 0;
+    .navbar-brand {
+        font-weight: bolder;
+        .light {
+            font-weight: 300;
+        }
+    }
+    .navbar-toggler {
+        outline: none;
+    }
+}
+    
+.collapse-bg {
+    padding: 0 !important;
+    .card {
+        margin-bottom: 0;
+        border-radius: 0;
+        border: none;
+    }
+}
+    
+.collapse-bg .card .list-group-item {
+    padding: 0;
+    border-radius: 0 !important;
+    border-color: black;
+    a {
+        background-color: #1a1a1a;
+        color: #bdc3c7;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        &:active {
+            color: white;
+            border-bottom: none;
+        }
+    }
+}
+
+.btn-sign_up {
+    background-color: darken($color: #bdc3c7, $amount: 10);
+    color: #fff;
+    border: solid black 1px;
+    height: 33px;
+    margin-top: 4px;
+    padding-top: 3px;
+    &:hover {
+        background-color: darken($color: #bdc3c7, $amount: 20);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
+.btn-log_in {
+    background-color: darken($color: #bdc3c7, $amount: 10);
+    color: #fff;
+    border: solid black 1px;
+    height: 33px;
+    margin-top: 4px;
+    padding-top: 3px;
+    &:hover {
+        background-color: darken($color: #bdc3c7, $amount: 20);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}

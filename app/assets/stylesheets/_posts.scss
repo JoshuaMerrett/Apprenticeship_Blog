@@ -1,0 +1,109 @@
+body {
+    background-color: #EDEEF2;
+}
+
+.blog {
+    text-align: center;
+    border-bottom: 1px solid #181818;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-top: 25px;
+}
+
+/* Show page header section */
+.post_title {
+    margin-top: 5%;
+    padding-top: 0px;
+    margin-bottom: 0;
+    border-bottom: solid black 1px;
+}
+
+.date {
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.col-md-12, .col-lg-10 {
+    margin-top: 0;
+    background-color: #fff;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0px 0px 40px rgba(0,0,0,0.76);
+}
+
+/* Posts styling section */
+
+.posts.index {
+    .card {
+        border: none;
+        border-radius: 20px;
+        border-bottom: 1px solid #181818;
+        height: 400px;
+        margin-bottom: 20px;
+        .card-topper {
+            height: 200px;
+            width: 100%;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+        }
+        img {
+            width: inherit;
+            height: inherit;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+        }
+        .card-block {
+            padding: 10px;
+            margin-bottom: 0;
+            .btn-read {
+                background-color: #616161;
+                font-weight: 300;
+                border-radius: 12px;
+                color: #fff;
+                &:hover {
+                    background-color: lighten($color: #616161, $amount: 30);
+                }
+            }
+            .card-title {
+                font-size: 1.3rem;
+                margin-bottom: 0.5rem;
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+            .published-date {
+                font-size: 0.8rem;
+                color: #787878;
+                font-weight: 300;
+                margin-top: 0.3rem;
+                margin-bottom: 0.3rem;
+            }
+            .card-text {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 34em) {
+    .posts.index.card {
+        height: 440px;
+    }
+}
+
+/*Medium Screen size. Above 768px */
+@media screen and (max-width: 48em) {
+    .posts.index.card {
+        height: 420px;
+    }
+}
+
+/*Extra large screen size. Above 1200px */
+@media screen and (max-width: 75em) {
+    .posts.index.card {
+        height: 415px;
+    }
+}

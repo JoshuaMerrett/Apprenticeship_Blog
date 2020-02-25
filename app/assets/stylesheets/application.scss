@@ -1,0 +1,23 @@
+//= require actiontext
+@import "bootstrap";
+@import "navbar";
+@import "posts";
+@import "header";
+@import "footer";
+@import "alerts";
+@import "devise/buttons";
+@import "form";
+@import "buttons";
+
+.notice {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.alert {
+    border: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
