@@ -11,6 +11,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    #This code checks for the comments that relate to a specific post id and displays the comments that match that post id in descending order, this will display the most recent comment first.
+    @comments = Comment.where(post_id: @post).order("created_at DESC")
   end
 
   # GET /posts/new

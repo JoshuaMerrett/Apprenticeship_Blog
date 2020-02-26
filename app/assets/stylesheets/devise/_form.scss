@@ -1,0 +1,30 @@
+.log_in, .sign_up, .forgot {
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-top: 5%;
+    margin-right: 30%;
+    margin-left: 25%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.76);
+}
+
+.edit {
+    background-color: #fff;
+    padding-top: 10px;
+    margin-top: 0.75%;
+    padding-right: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+}
+
+#user_email, #user_password, #user_password_confirmation, #user_current_password {
+    width: 90%;
+}
+
+.field {
+    margin-bottom: 2%;
+}

@@ -14,7 +14,7 @@
   </div>
 
   <!-- Col is natvie to bootstrap and tells the code to structure the content into columns with the max number of columns being 12. Col-md is used for medium sized devices. The 10 relates to how many columns the content will use, the offset will use columns to center the content. Then the line at the end of the class will center all of the text. -->
-  <div class="col-md-12 col-lg-10 text-xs-center" style="margin-left: 10%;">
+  <div class="col-md-12 col-lg-10">
 
     <h1 class="post_title"><%= @post.title %></h1>
     <p class="date"><%= @post.display_day_published %></p>
@@ -25,5 +25,11 @@
       <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-edit' %><br>
     <% end %>
     <br>
-    <%= @post.body %>
+    
+    <div class="post_body">
+      <%= @post.body %>
+    </div>
+
+    <legend></legend>
+    <%= render 'comments/comment' %>
   </div>

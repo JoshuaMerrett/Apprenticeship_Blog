@@ -1,0 +1,11 @@
+<!-- The .build method is used to load objects within the memory, allowing the view to use the object and display content. This is beneficial with forms. This is why the buil dmethod has been used in this file. -->
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+  
+  <div class="form-group">
+    <%= f.label :comment %>
+    <%= f.text_field :content, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Create Comment", class: "btn btn-create_comment" %>
+
+<% end %>

@@ -32,10 +32,10 @@
                 <%= link_to 'Blog', root_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-                <%= link_to 'About', about_path, class: "nav-link" %>
+                <%= link_to 'About', href="#about", class: "nav-link" %>
             </li>
             <li class="nav-item">
-                <%= link_to 'Contact', contact_path, class: "nav-link" %>
+                <%= link_to 'Contact', href="#contact", class: "nav-link" %>
             </li>
 
             <!-- The code below will check to see if there is a user currently signed in. -->
@@ -44,6 +44,10 @@
                 <li class="nav-item">
                     <!-- The link to will assign the appropriate path to the words that are placed next to link_to. In the code below, the path and actions will be assigned to the words Sign Out. The path for this link will look for destory_user_session, this will destroy the current user session and sign them out of thier account. The following code, method: :delete, is required to tell the code that the method that should be performed when the link is pressed is delete, which will delete the current session. -->
                     <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "btn btn-sign_out" %>
+                </li>
+
+                <li class="nav-item">
+                    <%= link_to "Account Details", edit_user_registration_path, class: "btn btn-sign_out" %>
                 </li>
             <% else %>
                 <!-- The following links will be displayed in the navigation bar if the current user is not true, meaning that their is no user currently signed in. -->

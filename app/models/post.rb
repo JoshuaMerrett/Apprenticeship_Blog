@@ -1,6 +1,10 @@
 class Post < ApplicationRecord
     has_rich_text :body
 
+    has_one :user
+    #dependant: :destroy, is used to say that if the post is destroyed then the comments will be destoryed too.
+    has_many :comments, dependent: :destroy
+
     has_one_attached :image
     #This code is used to tell the application to extend (use) FriendlyId.
     extend FriendlyId

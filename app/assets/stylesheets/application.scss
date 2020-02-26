@@ -6,8 +6,17 @@
 @import "footer";
 @import "alerts";
 @import "devise/buttons";
+@import "devise/form";
 @import "form";
 @import "buttons";
+@import "comments/form";
+@import "comments/buttons";
+@import "pages/about";
+
+html, body {
+    min-height: 100%;
+    min-width: 100%;
+}
 
 .notice {
     margin-block-start: 0;
@@ -20,4 +29,9 @@
 
 .navbar-light .navbar-nav .nav-link {
     color: #000;
+}
+
+legend {
+    border-top: solid black 1px;
+    margin-top: 2%;
 }

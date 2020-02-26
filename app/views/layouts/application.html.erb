@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- The code below will display the the title of the page | Blog in the tab section of a web browser -->
+    <!-- The code below will display the title of the page, followed by | Blog in the tab section of a web browser -->
     <title><%= yield (:page_title) %> | Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -18,7 +18,9 @@
   <!-- The code below is used to check if the current page being viewed is the same as the page that the root path is linked to. If the page is the root page then the header code will execute causing the header to be displayed on the root page. If the page being displayed isn't the root page then the header will not be displayed. -->
   <% if current_page?(root_path) %>
     <%= render 'layouts/header' %>
+    <%= render 'pages/about' %>
   <% end %>
+
     <!-- The embedded ruby code in the div tag is primarily used to aid with css styling. The code will display the name of the controller and the action that the controller is using in the web browsers inspect tool. -->
     <div class="container-posts <%= controller_name %> <%= action_name %>">
       <!-- The tag below (<%= %>) is used to tell the application that the code contained within is ruby. The tags allow you to embed ruby code into html documents provided the document is saved as .html.erb. Yield is used by ruby to display contents onto the web page, the content is taken from the view files within the application -->
@@ -26,6 +28,7 @@
         <%= yield %>
       </div>
     </div>
+      <!-- The code below is used to check if the current page being viewed is the same as the page that the root path is linked to. If the page is the root page then the footer code will execute causing the footer to be displayed on the root page. If the page being displayed isn't the root page then the footer will not be displayed. -->
     <% if current_page?(root_path) %>
       <%= render 'layouts/footer' %>
     <% end %>

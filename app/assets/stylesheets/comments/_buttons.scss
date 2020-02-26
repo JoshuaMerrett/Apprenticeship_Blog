@@ -1,4 +1,5 @@
-.btn-user_log_in, .btn-update_details {
+.btn-create_comment, .btn-update_comment {
+    margin-bottom: 10px;
     background-color: #789648;
     color: #fff;
     border: solid black 1.5px;
@@ -12,7 +13,8 @@
     }
 }
 
-.btn-user_sign_up {
+.btn-edit_comment_back {
+    margin-bottom: 10px;
     background-color: darken($color: #bdc3c7, $amount: 10);
     color: #fff;
     border: solid black 1.5px;
@@ -20,35 +22,33 @@
     margin-top: 4px;
     padding-top: 3px;
     &:hover {
-        background-color: darken($color: #bdc3c7, $amount: 20);
+        background-color: darken($color: #bdc3c7, $amount: 10);
         color: darken($color: #fff, $amount: 10);
         border: solid lighten($color: #000000, $amount: 50) 1px;
     }
 }
 
-.btn-forgot, .btn-cancel_account {
+.btn-delete_comment {
     background-color: #820E1C;
     color: #fff;
     border: solid black 1.5px;
-    height: 33px;
-    margin-top: 4px;
-    padding-top: 3px;
+    margin-bottom: 5px;
     &:hover {
-        background-color: lighten($color: #820E1C, $amount: 5);
+        background-color: darken($color: #820E1C, $amount: 5);
         color: darken($color: #fff, $amount: 10);
-        border: solid lighten($color: #bdc3c7, $amount: 50) 1px;
+        border: solid lighten($color: #000000, $amount: 50) 1px;
     }
 }
 
-.btn-user_reset {
-    background-color: #820E1C;
+.btn-edit_comment {
+    background-color: #58939B;
     color: #fff;
     border: solid black 1.5px;
-    height: 33px;
-    padding-top: 3px;
+    margin-right: 0.5%;
+    margin-bottom: 5px;
     &:hover {
-        background-color: lighten($color: #820E1C, $amount: 5);
+        background-color: darken($color: #58939B, $amount: 5);
         color: darken($color: #fff, $amount: 10);
-        border: solid lighten($color: #bdc3c7, $amount: 50) 1px;
+        border: solid lighten($color: #000000, $amount: 50) 1px;
     }
 }

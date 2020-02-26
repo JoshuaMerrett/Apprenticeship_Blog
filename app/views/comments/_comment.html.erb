@@ -1,0 +1,24 @@
+<h5><strong><%= pluralize(@comments.count, "Comment") %></strong></h5>
+
+<% @comments.each do |comment| %>
+
+    <div class="comment">
+        <!-- The code below is used to display the email address of the user that created the comment. -->
+        <p><b><%= comment.user.email %></b></p>
+        <p><%= comment.content %></p>
+
+        <!-- The if statement below is used to check if current_user is active, meaning that a user is currently signed in. If there isn't a user signed in then the if statement for the buttons will not run. -->
+        <% if current_user %>
+            <!-- The if statement below is used to check if the current user that is signed in, matches the user that created a comment, or if the current user that is logged in is an admin. If one of the statements is true then the code will execute. If the user signed in, is not an admin then they will only be able to edit and delete their own comments. -->
+            <% if current_user == comment.user || current_user.admin %>
+                <%= link_to 'Edit Comment', edit_post_comment_path(comment.post, comment), class: "btn btn-edit_comment" %>
+
+                <%= link_to 'Delete Comment', [comment.post, comment], method: :delete, data: { confirm: "Are you sure you want to delete this comment?"}, class: "btn btn-delete_comment" %>
+            <% end %>
+        <% end %>
+    </div>
+
+<% end %>
+
+<legend></legend>
+<%= render 'comments/form' %>
