@@ -3,8 +3,8 @@
 <% @comments.each do |comment| %>
 
     <div class="comment">
-        <!-- The code below is used to display the email address of the user that created the comment. -->
-        <p><b><%= comment.user.email %></b></p>
+        <!-- The code below is used to display the email address of the user that created the comment. The .username is used to reference the action that is stored in the user.rb model. This will call the action that will then execute the code stored in the action and return the results. -->
+        <p><b><%= comment.user.username %></b></p>
         <p><%= comment.content %></p>
 
         <!-- The if statement below is used to check if current_user is active, meaning that a user is currently signed in. If there isn't a user signed in then the if statement for the buttons will not run. -->
