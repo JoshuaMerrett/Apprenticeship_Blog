@@ -2,11 +2,15 @@
 <% provide(:page_title, "All Posts") %>
 <!-- The code below will place the word active wherever :blog_active is yield. This will display the page that is being viewed in bold in the navbar. -->
 
+<a id="blog"></a>
+
 <div class="container">
   <h1 class="blog">Blog</h1>
 
-  <% if current_user && current_user.admin? %>
-    <%= link_to 'New Post', new_post_path(@post), class: 'btn btn-new btn-secondary' %>
+  <% if current_user %>
+    <% if current_user.id || current_user.admin %>
+      <%= link_to 'New Post', new_post_path(@post), class: 'btn btn-new btn-secondary' %>
+    <% end %>
   <% end %>
 </div>
 <br>

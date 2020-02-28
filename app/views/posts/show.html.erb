@@ -20,7 +20,7 @@
     <p class="date"><%= @post.display_day_published %></p>
 
     <br>
-    <% if current_user && current_user.admin %>
+    <% if current_user && current_user.admin? %>
       <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure you want to delete this post?'}, class: 'btn btn-delete' %>
       <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-edit' %><br>
     <% end %>

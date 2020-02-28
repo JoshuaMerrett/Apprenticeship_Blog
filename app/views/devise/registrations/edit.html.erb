@@ -1,11 +1,11 @@
 <% provide(:page_title, "Change Password") %>
 
-<section class="edit">
+<section class="edit_user">
   <h2>Edit <%= resource_name.to_s.humanize %></h2>
   <div class="container">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-
+      
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>

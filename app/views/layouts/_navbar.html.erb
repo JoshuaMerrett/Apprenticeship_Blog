@@ -29,10 +29,11 @@
         </button>
         <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
             <li class="nav-item">
-                <%= link_to 'Blog', root_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
                 <%= link_to 'About', href="#about", class: "nav-link" %>
+            </li>
+            
+            <li class="nav-item">
+                <%= link_to 'Blog', href="#blog", class: "nav-link" %>
             </li>
 
             <!-- The code below will check to see if there is a user currently signed in. -->
@@ -56,6 +57,10 @@
                     <%= link_to 'Log In', new_user_session_path, class: "btn btn-log_in" %>
                 </li>
             <% end %>
+            
+            <li class="nav-item username" style="padding-top: 2%; font-weight: bold;" >
+                <%= current_user.username %>
+            </li>
         </ul>
     </div>
 </nav>
