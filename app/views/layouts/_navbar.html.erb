@@ -58,9 +58,11 @@
                 </li>
             <% end %>
             
-            <li class="nav-item username" style="padding-top: 2%; font-weight: bold;" >
-                <%= current_user.username %>
-            </li>
+            <% if current_user %>
+                <li class="nav-item username" style="padding-top: 2%; font-weight: bold;" >
+                    <%= current_user.username %>
+                </li>
+            <% end %>
         </ul>
     </div>
 </nav>

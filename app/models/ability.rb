@@ -15,7 +15,7 @@ class Ability
         can :manage, :all
       else
         #If the user is not an admin then they are assigned the rights to only manage posts created by that specific user
-        can :manage, Post, user: user.id 
+        can :manage, Post, user_id: user.id 
       end
     end
     
