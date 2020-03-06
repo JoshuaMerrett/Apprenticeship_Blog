@@ -108,6 +108,19 @@
     }
 }
 
+.btn-back_posts {
+    background-color: darken($color: #bdc3c7, $amount: 10);
+    color: #fff;
+    border: solid black 1.5px;
+    margin-top: 1%;
+    margin-left: 2.7%;
+    &:hover {
+        background-color: darken($color: #bdc3c7, $amount: 20);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
 .btn-edit_posts_back {
     background-color: darken($color: #bdc3c7, $amount: 10);
     color: #fff;

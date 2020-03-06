@@ -5,3 +5,5 @@
 //= link comments/_form.css
 //= link comments/_buttons.css
 //= link pages/_about.css
+//= link pages/glossary.css
+//= link pages/cpd.css

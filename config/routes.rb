@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   #When the website is loaded the application will execute the code which will run the code that is stored within the index action of the posts.
   root to: 'posts#index'
 
-  get 'about', to: 'pages#about', as: :about
-  get 'contact', to: 'pages#contact', as: :contact
+  get 'glossary', to: 'pages#glossary', as: :glossary
+  get 'cpd', to: 'pages#cpd', as: :cpd
+
 
   resources :blog, to: 'posts'
   

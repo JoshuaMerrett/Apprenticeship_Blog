@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
 
-    def about 
+    def glossary 
     end
 
-    def contact
+    def cpd
     end
 end
