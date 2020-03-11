@@ -6,8 +6,8 @@
                 <li class="list-group-item">
                     <%= link_to 'Home', href="/", class: "nav-link" %>
                 </li>
-                <li class="list-group-item">
-                    <%= link_to 'Glossary', glossary_path, class: "nav-link #{yield(:glossary_active)}" %>
+                <li class="nav-item">
+                    <%= link_to 'Glossary', glossaries_path, class: "nav-link #{yield(:glossaries_active)}" %>
                 </li>
                 <li class="list-group-item">
                     <%= link_to 'CPD', cpd_path, class: "nav-link #{yield(:cpd_active)}" %>
@@ -54,7 +54,7 @@
             </li>
 
             <li class="nav-item">
-                <%= link_to 'Glossary', glossary_path, class: "nav-link #{yield(:glossary_active)}" %>
+                <%= link_to 'Glossary', glossaries_path, class: "nav-link #{yield(:glossaries_active)}" %>
             </li>
 
             <li class="nav-item">

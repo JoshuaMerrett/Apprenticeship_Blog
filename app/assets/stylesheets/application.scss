@@ -12,8 +12,10 @@
 @import "comments/form";
 @import "comments/buttons";
 @import "pages/about";
-@import "pages/glossary";
 @import "pages/cpd";
+@import "glossary/glossaries";
+@import "glossary/buttons";
+@import "glossary/form";
 
 html, body {
     min-height: 100%;

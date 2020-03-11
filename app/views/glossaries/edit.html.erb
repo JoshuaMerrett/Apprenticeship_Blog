@@ -1,0 +1,11 @@
+<% provide(:page_title, "Edit Glossary") %>
+
+<section class="edit_glossary">
+    <div class="container">
+        <h1 id="glossary">Editing Glossary</h1>
+
+        <%= render 'form', glossary: @glossary %>
+
+        <%= link_to 'Back', glossaries_path, class: "btn btn-back_glossary" %>
+    </div>
+</section>

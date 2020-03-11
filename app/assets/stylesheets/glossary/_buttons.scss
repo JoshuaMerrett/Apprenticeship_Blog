@@ -1,0 +1,68 @@
+.btn-new_glossary {
+    margin-bottom: 10px;
+    background-color: #789648;
+    color: #000;
+    border: solid black 1.5px;
+    height: 33px;
+    margin-top: 4px;
+    padding-top: 3px;
+    &:hover {
+        background-color: darken($color: #789648, $amount: 10);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
+.btn-back_glossary {
+    background-color: darken($color: #bdc3c7, $amount: 10);
+    color: #000;
+    border: solid black 1.5px;
+    height: 37px;
+    margin-top: 4px;
+    &:hover {
+        background-color: darken($color: #bdc3c7, $amount: 20);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
+.btn-submit {
+    margin-bottom: 10px;
+    background-color: #789648;
+    color: #000;
+    border: solid black 1.5px;
+    height: 33px;
+    margin-top: 4px;
+    padding-top: 3px;
+    &:hover {
+        background-color: darken($color: #789648, $amount: 10);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
+.btn-glossary_edit {
+    background-color: #355E64;
+    color: #fff;
+    border: solid black 1.5px;
+    margin-bottom: 5%;
+    height: 35px;
+    &:hover {
+        background-color: lighten($color: #355E64, $amount: 10);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
+.btn-glossary_delete {
+    background-color: #820E1C;
+    color: #fff;
+    margin-bottom: 5%;
+    height: 35px;
+    border: solid black 1.5px;
+    &:hover {
+        background-color: darken($color: #820E1C, $amount: 5);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}

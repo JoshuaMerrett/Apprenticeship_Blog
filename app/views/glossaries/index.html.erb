@@ -1,0 +1,49 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<% provide(:page_title, "Glossary") %>
+
+<section class="glossary_page">
+  <div class="container">
+    <h1 id="glossary">Glossary</h1>
+    
+    <% if current_user %>
+      <% if current_user.admin %>
+        <%= link_to 'New Glossary', new_glossary_path, class: 'btn btn-new_glossary' %>
+      <% end %>
+    <% end %>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th colspan="5"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @glossaries.each do |glossary| %>
+          <tr>
+            <td class="glossary_letter"><strong><%= glossary.letter %><strong></td>
+          </tr>
+          <tr>
+            <td class="glossary_title"><%= glossary.title %></td>
+            <td class="glossary_body" style="border-right: 1px solid white;"><%= glossary.body %></td>
+            <% if current_user %>
+              <% if current_user.admin %>
+                <td class="glossary-edit"><%= link_to 'Edit', edit_glossary_path(glossary.id), class: "btn btn-glossary_edit" %></td>
+                <td class="glossary-delete"><%= link_to 'Delete', glossary_path(glossary.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-glossary_delete" %></td>
+              <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+  var mylist = $('#myTable');
+  var listitems = mylist.find('tr');
+  listitems.sort(function(a, b) {
+    return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+  })
+  $.each(listitems, function(idx, itm) { mylist.append(itm); });
+</script>
