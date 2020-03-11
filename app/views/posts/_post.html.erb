@@ -4,7 +4,7 @@
 
 <div class="col-md-6  col-lg-4">
     <div class="card">
-        <div class="card-topper">
+        <div class="card-topper" aria-hidden="true">
         <!-- The code below will check to see if the post currently has an image attached to it, if there is an image attached then the image will be displayed. If there isn't an image attached then nothing will be displayed. -->
             <%= image_tag (post.image) if post.image.attached? %>
         </div>

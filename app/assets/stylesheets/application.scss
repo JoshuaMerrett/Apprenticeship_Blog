@@ -12,6 +12,10 @@
 @import "comments/form";
 @import "comments/buttons";
 @import "pages/about";
+@import "pages/cpd";
+@import "glossary/glossaries";
+@import "glossary/buttons";
+@import "glossary/form";
 
 html, body {
     min-height: 100%;
@@ -35,3 +39,8 @@ legend {
     border-top: solid black 1px;
     margin-top: 2%;
 }
+
+footer {
+    margin-top: 3.7%;
+}
+

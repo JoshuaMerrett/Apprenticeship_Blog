@@ -1,0 +1,34 @@
+<%= form_with(model: glossary, local: true) do |form| %>
+  <% if glossary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(glossary.errors.count, "error") %> prohibited this glossary from being saved:</h2>
+
+      <ul>
+        <% glossary.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :letter %>
+    <%= form.text_field :letter, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :content %>
+    <%= form.rich_text_area :body, class: "form-control" %>
+  </div>
+
+  <% if current_page? (new_glossary_path(@glossaries)) %>
+    <br /><%= form.submit "Create Glossary Record", class: "btn btn-submit" %>
+  <% else current_page? (edit_glossary_path(@glossary)) %>
+    <br /><%= form.submit "Update Glossary Record", class: "btn btn-submit" %>
+  <% end %>
+<% end %>

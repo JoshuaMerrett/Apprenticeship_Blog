@@ -2,7 +2,7 @@
 
 .btn-sign_up {
     background-color: darken($color: #bdc3c7, $amount: 10);
-    color: #fff;
+    color: #000;
     border: solid black 1px;
     height: 33px;
     margin-top: 4px;
@@ -16,7 +16,7 @@
 
 .btn-log_in {
     background-color: darken($color: #bdc3c7, $amount: 10);
-    color: #fff;
+    color: #000;
     border: solid black 1px;
     height: 33px;
     margin-top: 4px;
@@ -30,7 +30,7 @@
 
 .btn-sign_out {
     background-color: darken($color: #bdc3c7, $amount: 10);
-    color: #fff;
+    color: #000;
     border: solid black 1px;
     height: 33px;
     margin-top: 4px;
@@ -45,7 +45,7 @@
 .btn-new {
     margin-bottom: 10px;
     background-color: #789648;
-    color: #fff;
+    color: #000;
     border: solid black 1.5px;
     height: 33px;
     margin-top: 4px;
@@ -70,13 +70,13 @@
 }
 
 .btn-edit{
-    background-color: #58939B;
+    background-color: #355E64;
     color: #fff;
     border: solid black 1.5px;
     float: right;
     margin-right: 0.75%;
     &:hover {
-        background-color: darken($color: #58939B, $amount: 5);
+        background-color: lighten($color: #355E64, $amount: 10);
         color: darken($color: #fff, $amount: 10);
         border: solid lighten($color: #000000, $amount: 50) 1px;
     }
@@ -84,7 +84,7 @@
 
 .btn-back {
     background-color: darken($color: #bdc3c7, $amount: 10);
-    color: #fff;
+    color: #000;
     border: solid black 1.5px;
     margin-left: 70%;
     margin-top: 20px;
@@ -97,7 +97,7 @@
 
 .btn-posts_back {
     background-color: darken($color: #bdc3c7, $amount: 10);
-    color: #fff;
+    color: #000;
     border: solid black 1.5px;
     height: 37px;
     margin-top: 4px;
@@ -108,9 +108,22 @@
     }
 }
 
+.btn-back_posts {
+    background-color: darken($color: #bdc3c7, $amount: 10);
+    color: #000;
+    border: solid black 1.5px;
+    margin-top: 1%;
+    margin-left: 2.7%;
+    &:hover {
+        background-color: darken($color: #bdc3c7, $amount: 20);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
 .btn-edit_posts_back {
     background-color: darken($color: #bdc3c7, $amount: 10);
-    color: #fff;
+    color: #000;
     border: solid black 1.5px;
     height: 30px;
     margin-top: 4px;
@@ -124,7 +137,7 @@
 
 .btn-show {
     background-color: darken($color: #bdc3c7, $amount: 10);
-    color: #fff;
+    color: #000;
     border: solid black 1.5px;
     height: 30px;
     margin-top: 4px;
@@ -140,7 +153,7 @@
 .btn-new_update {
     margin-bottom: 10px;
     background-color: #789648;
-    color: #fff;
+    color: #000;
     border: solid black 1.5px;
     height: 33px;
     margin-top: 4px;
