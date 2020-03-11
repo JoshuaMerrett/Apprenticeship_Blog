@@ -28,8 +28,8 @@
             <td class="glossary_body" style="border-right: 1px solid white;"><%= glossary.body %></td>
             <% if current_user %>
               <% if current_user.admin %>
-                <td class="glossary-edit"><%= link_to 'Edit', edit_glossary_path(glossary.id), class: "btn btn-glossary_edit" %></td>
-                <td class="glossary-delete"><%= link_to 'Delete', glossary_path(glossary.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-glossary_delete" %></td>
+                <td class="glossary-edit"><%= link_to 'Edit', edit_glossary_path(glossary), class: "btn btn-glossary_edit" %></td>
+                <td class="glossary-delete"><%= link_to 'Delete', glossary_path(glossary), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-glossary_delete" %></td>
               <% end %>
             <% end %>
           </tr>
