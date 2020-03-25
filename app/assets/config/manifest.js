@@ -9,3 +9,6 @@
 //= link glossary/glossaries.css
 //= link glossary/_buttons.css
 //= link glossary/_form.css
+//= link cpd/cpds.css
+//= link cpd/_buttons.css
+//= link cpd/_form.css

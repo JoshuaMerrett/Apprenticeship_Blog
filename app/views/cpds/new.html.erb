@@ -1,0 +1,11 @@
+<% provide(:page_title, "New CPD") %>
+
+<section class="new_cpd">
+    <div class="container">
+        <h1 id="cpd">New CPD</h1>
+
+        <%= render 'form', cpd: @cpd %>
+
+        <%= link_to 'Back to CPD', cpds_path, class: "btn btn-back_cpd" %>
+    </div>
+</section>

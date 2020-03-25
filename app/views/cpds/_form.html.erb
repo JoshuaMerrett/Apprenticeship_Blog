@@ -1,0 +1,39 @@
+<%= form_with(model: cpd, local: true) do |form| %>
+  <% if cpd.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cpd.errors.count, "error") %> prohibited this cpd from being saved:</h2>
+
+      <ul>
+        <% cpd.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :date %>
+    <%= form.date_field :date, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.rich_text_area :body, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :image %>
+    <%= form.file_field :image, class: "form-control" %>
+  </div>
+
+  <% if current_page? (new_cpd_path(@cpds)) %>
+    <br /><%= form.submit "Create CPD Record", class: "btn btn-submit" %>
+  <% else current_page? (edit_cpd_path(@cpd)) %>
+    <br /><%= form.submit "Update CPD Record", class: "btn btn-submit" %>
+  <% end %>
+<% end %>

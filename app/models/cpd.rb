@@ -1,0 +1,2 @@
+class Cpd < ApplicationRecord
+end

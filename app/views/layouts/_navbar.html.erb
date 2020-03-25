@@ -10,7 +10,7 @@
                     <%= link_to 'Glossary', glossaries_path, class: "nav-link #{yield(:glossaries_active)}" %>
                 </li>
                 <li class="list-group-item">
-                    <%= link_to 'CPD', cpd_path, class: "nav-link #{yield(:cpd_active)}" %>
+                    <%= link_to 'CPD', cpds_path, class: "nav-link #{yield(:cpd_active)}" %>
                 </li>
 
                 <% if current_user %>
@@ -58,7 +58,7 @@
             </li>
 
             <li class="nav-item">
-                <%= link_to 'CPD', cpd_path, class: "nav-link #{yield(:cpd_active)}" %>
+                <%= link_to 'CPD', cpds_path, class: "nav-link #{yield(:cpd_active)}" %>
             </li>
 
             <!-- The code below will check to see if there is a user currently signed in. -->

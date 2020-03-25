@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
+  resources :cpds
   resources :glossaries
   devise_for :users
   #When the website is loaded the application will execute the code which will run the code that is stored within the index action of the posts.
   root to: 'posts#index'
-
-  get 'cpd', to: 'pages#cpd', as: :cpd
 
   resources :blog, to: 'posts'
   

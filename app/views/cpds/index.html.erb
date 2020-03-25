@@ -1,0 +1,36 @@
+<% provide(:page_title, "CPD") %>
+
+<section class="cpd_page">
+  <div class="container">
+    <h1 id="cpd">CPD</h1>
+
+    <% if current_user %>
+      <% if current_user.admin %>
+        <%= link_to 'New CPD Record', new_cpd_path, class: 'btn btn-new_cpd' %>
+      <% end %>
+    <% end %>
+
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @cpds.each do |cpd| %>
+          <tr>
+            <% if current_user %>
+              <% if current_user.admin %>
+                <td class="cpd-edit"><%= link_to 'Edit', edit_cpd_path(cpd),  class: "btn btn-cpd_edit"%></td>
+                <td class="cpd-delete"><%= link_to 'Destroy', cpd, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-cpd_delete" %></td>
+              <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+  </div>
+</section>
