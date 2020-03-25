@@ -28,6 +28,7 @@ development:
   # The password associated with the postgres role (username).
   password: qwerty12345
   host: localhost
+  port: 5432
 
 #test:
 #  <<: *default
