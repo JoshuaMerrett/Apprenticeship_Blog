@@ -1,0 +1,54 @@
+.btn-user_log_in, .btn-update_details {
+    background-color: #789648;
+    color: #000;
+    border: solid black 1.5px;
+    height: 33px;
+    margin-top: 4px;
+    padding-top: 3px;
+    &:hover {
+        background-color: darken($color: #789648, $amount: 10);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
+.btn-user_sign_up {
+    background-color: darken($color: #bdc3c7, $amount: 10);
+    color: #000;
+    border: solid black 1.5px;
+    height: 33px;
+    margin-top: 4px;
+    padding-top: 3px;
+    &:hover {
+        background-color: darken($color: #bdc3c7, $amount: 20);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #000000, $amount: 50) 1px;
+    }
+}
+
+.btn-forgot, .btn-delete_account {
+    background-color: #820E1C;
+    color: #fff;
+    border: solid black 1.5px;
+    height: 33px;
+    margin-top: 4px;
+    padding-top: 3px;
+    &:hover {
+        background-color: lighten($color: #820E1C, $amount: 5);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #bdc3c7, $amount: 50) 1px;
+    }
+}
+
+.btn-user_reset {
+    background-color: #820E1C;
+    color: #fff;
+    border: solid black 1.5px;
+    height: 33px;
+    padding-top: 3px;
+    &:hover {
+        background-color: lighten($color: #820E1C, $amount: 5);
+        color: darken($color: #fff, $amount: 10);
+        border: solid lighten($color: #bdc3c7, $amount: 50) 1px;
+    }
+}

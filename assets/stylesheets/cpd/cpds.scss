@@ -1,0 +1,52 @@
+// Place all the styles related to the cpds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.cpd_page {
+    background-color: #fff;
+    margin-top: 3%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.76);
+    margin-bottom: 5%;
+    padding-bottom: 2%;
+}
+
+#cpd {
+    text-align: center;
+    border-bottom: 1.5px solid #181818;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-top: 25px;
+}
+
+tbody {
+    border-left: 1px solid white;
+}
+
+.table, th, td {
+    border-right: solid darken($color: #EDEEF2, $amount: 15px) 1px;
+}
+
+.cpd_page {
+    background-color: #fff;
+    margin-top: 3%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.76);
+}
+
+.cpd_body {
+    padding-left: 1%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid white;
+}
+
+.cpd-edit {
+    padding-left: 1%;
+    border-right: 1px solid white;
+}
+
+.cpd-delete {
+    padding-left: 1%;
+    border-right: 1px solid white;
+}

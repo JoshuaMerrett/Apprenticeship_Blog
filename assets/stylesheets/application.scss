@@ -1,0 +1,112 @@
+//= require actiontext
+@import "bootstrap";
+@import "navbar";
+@import "posts";
+@import "header";
+@import "footer";
+@import "alerts";
+@import "devise/buttons";
+@import "devise/form";
+@import "form";
+@import "buttons";
+@import "comments/form";
+@import "comments/buttons";
+@import "pages/about";
+@import "glossary/glossaries";
+@import "glossary/buttons";
+@import "glossary/form";
+@import "cpd/cpds";
+@import "cpd/buttons";
+@import "cpd/form";
+
+html, body {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.notice {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.alert {
+    border: 0;
+}
+
+.intro {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+legend {
+    border-top: solid black 1px;
+    margin-top: 2%;
+}
+
+footer {
+    margin-top: 3.7%;
+}
+
+@media screen and (max-width: 34em) {
+    footer {
+        display: none;
+    }
+}
+
+/*Medium Screen size. Above 768px */
+@media screen and (max-width: 48em) {
+    footer {
+        display: none;
+    }
+}
+
+/*Extra large screen size. Above 1200px */
+@media screen and (max-width: 75em) {
+    footer {
+        display: none;
+    }
+}
+
+/* Print Sheet */
+
+@media print {
+    nav, footer {
+        display: none;
+    }
+
+    .col-lg-12 {
+        padding-top: 10%;
+    }
+
+    .card-topper {
+        display: none;
+    }
+
+    .btn-read {
+        display: none;
+    }
+
+    .col-md-6, .col-lg-4 {
+        height: 200px;
+        border-bottom: none;
+    }
+
+    .posts.index.card {
+        border: none;
+        border-bottom: none;
+    }
+
+    .btn-back_posts {
+        display: none;
+    }
+
+    header {
+        height: 200px;
+        .intro:after {
+            content: " blog.joshuamerrett.co.uk"
+        }
+    }
+}

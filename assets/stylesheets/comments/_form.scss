@@ -1,0 +1,34 @@
+.comment {
+    background-color: #fff;
+    margin-top: 20px;
+    border: 1px solid darken($color: #E6E6E6, $amount: 20);
+    border-radius: inherit;
+    padding-bottom: 1px;
+    padding-left: 1%;
+}
+
+.edit_comment {
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.76);
+}
+
+#edit_comment_1 {
+    padding-top: 3%;
+}
+
+.comment_legend {
+    margin-top: 1%;
+}
+
+.edit_comment {
+    background-color: #fff;
+    padding-bottom: 1.5%;
+    padding-left: 30px;
+    margin-top: 3%;
+    padding-right: 20px;
+}
+
+.container-posts {
+    margin-top: 2%;
+}
